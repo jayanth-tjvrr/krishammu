@@ -31,7 +31,7 @@
     mm = String(today.getMonth() + 1).padStart(2, "0"),
     yyyy = today.getFullYear(),
     birthdayDate = "04/21/2024",
-    birthdayTime = "12:00:00"; // Specify the time in HH:MM:SS format
+    birthdayTime = "23:35:10"; // Specify the time in HH:MM:SS format
     birthday = birthdayDate + " " + birthdayTime;
     
     today = mm + "/" + dd + "/" + yyyy;
@@ -49,7 +49,7 @@
     document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
     //do something later when date is reached
     if (distance < 0) {
-    document.getElementById("headline").innerText = "It's my birthday!";
+    document.getElementById("headline").innerText = "Bless the married couple for happy life!";
     document.getElementById("countdown").style.display = "none";
     document.getElementById("content").style.display = "block";
     clearInterval(x);

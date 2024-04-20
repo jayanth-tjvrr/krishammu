@@ -119,6 +119,54 @@
 
 <!--Save the date video of couples-->
 
+<div style="position: relative;">
+    <video id="myVideo" width="100%" height="100%" loop>
+        <source src="assets/video/Gopii.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="playButton" class="play-button">
+        <!-- Use an SVG for the play icon -->
+        <svg width="50" height="50" viewBox="0 0 24 24">
+            <path fill="#fff" d="M8 5v14l11-7z"/>
+        </svg>
+    </div>
+</div>
+
+<script>
+    // Add event listener to play button
+    document.getElementById('playButton').addEventListener('click', function() {
+        var video = document.getElementById('myVideo');
+        video.muted = false; // Ensure video is not muted
+        video.play().catch(function(error) {
+            console.error('Video playback with audio failed:', error);
+        });
+
+        // Hide the play button once video starts playing
+        this.style.display = 'none';
+    });
+</script>
+
+<style>
+    /* Styling the play button overlay */
+    .play-button {
+        position: absolute;
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Correct the positioning */
+        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        padding: 10px; /* Padding around the SVG */
+        border-radius: 50%; /* Make it circular */
+        cursor: pointer;
+        z-index: 10; /* Make sure it's above the video */
+    }
+
+    /* Add hover effect */
+    .play-button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+</style>
+
+
 
 <!--Image gallery of couples-->
 

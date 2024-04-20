@@ -30,7 +30,10 @@ $(document).on('click', function(){
     dd = String(today.getDate()).padStart(2, "0"),
     mm = String(today.getMonth() + 1).padStart(2, "0"),
     yyyy = today.getFullYear(),
-    birthday = "04/21/2024";
+    birthdayDate = "04/21/2024",
+    birthdayTime = "12:00:00"; // Specify the time in HH:MM:SS format
+    birthday = birthdayDate + " " + birthdayTime;
+    
     today = mm + "/" + dd + "/" + yyyy;
     if (today > birthday) {
     birthday = dayMonth + nextYear;

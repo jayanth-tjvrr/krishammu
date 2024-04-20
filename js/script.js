@@ -7,10 +7,10 @@
 })(jQuery);
 
 
-$(document).on('click', function(){
-    document.getElementById("my_audio").play();
-    console.log('Kalyanathinu varane');
-});
+// $(document).on('click', function(){
+//     document.getElementById("my_audio").play();
+//     console.log('Kalyanathinu varane');
+// });
 
 
 
